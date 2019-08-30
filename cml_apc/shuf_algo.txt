@@ -1,0 +1,21 @@
+SHUFFLE ALGORITHM:
+
+
+The basic method given for shuffling the order of the .wav files from 1 through N (i.e the total no. of .wav files) goes as follows:
+
+1) Read all the files from 1 through N.
+    
+2)Generate a random number k between one and the number of unstruck files remaining (inclusive) by using srand(time(NULL)). 
+   
+The srand(time(NULL)) function makes use of the computer's internal clock to control the choice of the seed. Since time is continually       changing, the seed is forever changing. 
+
+3)A utility function is used to swap the files one by one (starting from the last .wav file in the Playlist) with the file at random index.
+      
+Counting from the low end i.e the last .wav file in the internally generated Playlist, strike out the kth file not yet struck out, and   write it down at the end of a separate list (.txt file). 
+   
+4)Repeat from step 2) until all the files have been struck out.
+    
+5)The sequence of files written down in step 3) is now a random permutation of the original files which is nothing but the shuffled playlist.
+
+
+
